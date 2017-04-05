@@ -36,6 +36,8 @@ describe Dessert do
     subject(:dessert) { Dessert.new("tiramisu", 1, chef) }
 
     it "adds an ingredient to the ingredients array" do
+      dessert.ingredients << "something"
+      expect(dessert.ingredients.count).to eq(1)
     end
   end
 
@@ -48,22 +50,26 @@ describe Dessert do
 
   describe "#eat" do
     it "subtracts an amount from the quantity" do
-      # expect(dessert.quantity).to eq(dessert.quantity - 1)
+      dessert.eat(1)
+      expect(dessert.quantity).to eq(1)
     end
 
     it "raises an error if the amount is greater than the quantity" do
+      expect { eat(3).to raise_error("not enough left!") }
     end
   end
 
   describe "#serve" do
     it "contains the titleized version of the chef's name" do
+      allow(double).to receive(:titleize)
     end
 
   end
 
   describe "#make_more" do
     it "calls bake on the dessert's chef with the dessert passed in" do
+      allow(double).to receive(:bake).and_return(dessert)
     end
-    
+
   end
 end
