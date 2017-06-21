@@ -1,0 +1,47 @@
+.splash {
+  display: flex;
+  height: 500px;
+  width: 100%;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+#hero {
+
+}
+.user-options {
+  display: flex;
+  height: 75px;
+  width: 300px;
+  align-items: center;
+  justify-content: space-around;
+  font-size: 22px;
+  border: 2px solid black;
+  border-radius: 20px;
+  background-color: black;
+  position: absolute;
+  right: 430px;
+  top: 545px;
+  list-style: none;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+  font-family: sans-serif;
+  width: 100%;
+  height: auto;
+  margin: auto;
+}
+
+a:hover {
+  color: orange;
+}
+
+
+
+#logo {
+  width: 100px;
+  height: auto;
+}
